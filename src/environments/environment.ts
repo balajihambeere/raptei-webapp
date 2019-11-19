@@ -3,9 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase : {
+    apiKey: 'AIzaSyC0rewx4SiiHbtm_isRsJutI-0-iaUHIQo',
+    authDomain: 'raptei.firebaseapp.com',
+    databaseURL: 'https://raptei.firebaseio.com',
+    projectId: 'raptei',
+    storageBucket: 'raptei.appspot.com',
+    messagingSenderId: '745611996433',
+    appId: '1:745611996433:web:12910d26a885363a'
+  }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

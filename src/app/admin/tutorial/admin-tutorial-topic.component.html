@@ -1,0 +1,56 @@
+<section class="featured-posts container mt-2">
+    <div class="section-title">
+        <h2><span class="text-capitalize">Add Topic to [ {{skill}} Tutorial]</span></h2>
+    </div>
+</section>
+<div class="shadow-sm">
+    <div class="container p-3">
+        <ngb-tabset>
+            <ngb-tab>
+                <ng-template ngbTabTitle><span data-feather="credit-card"></span> Add Topics</ng-template>
+                <ng-template ngbTabContent>
+                    <form class="p-3 mb-3" [formGroup]="topicForm" (ngSubmit)="submitForm()">
+                        <h2>Add New Topic</h2>
+                        <div class="form-group">
+                            <label for="inputTopicTitle">Title</label>
+                            <input type="text" class="form-control bg-light" formControlName="title"
+                                id="inputTopicTitle" aria-describedby="topicHelp" placeholder="Enter topics title*">
+                            <small id="topicHelp" class="form-text text-muted">It will be used as slug
+                                for
+                                seo.</small>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="inputTopicContent">Markdown Content</label>
+                                    <textarea type="text" rows="10" class="form-control bg-light"
+                                        formControlName="content" id="inputTopicContent"
+                                        aria-describedby="topicContentHelp"
+                                        placeholder="Enter topics markdown content*"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputTopicMetaDescription">Meta Description</label>
+                                    <textarea type="text" rows="4" class="form-control bg-light"
+                                        id="inputTopicMetaDescription" formControlName="metaDescription"
+                                        placeholder="Enter topics meta description*"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputTopicKeywords">Meta Keywords</label>
+                                    <textarea type="text" rows="3" class="form-control bg-light" id="inputTopicKeywords"
+                                        formControlName="keywords" placeholder="Enter topics meta keywords*"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-end">
+                            <a role="button" [routerLink]="['/admin/dashboard/tutorials/', skill, 'topics']"
+                                class="btn btn-primary mr-2">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>

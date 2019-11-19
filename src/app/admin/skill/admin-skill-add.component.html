@@ -1,0 +1,36 @@
+<section class="featured-posts container">
+    <div class="section-title">
+        <h2><span>Add skill</span></h2>
+    </div>
+</section>
+
+<div class="container shadow-sm">
+    <form class="col-md-6" [formGroup]="skillForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="inputSkill">Skill</label>
+            <input type="text" class="form-control bg-light" formControlName="name" id="inputskill"
+                aria-describedby="skillHelp" placeholder="Enter skill">
+            <small id="skillHelp" class="form-text text-muted">
+                It will be technology name.</small>
+        </div>
+        <div class="form-group">
+            <label for="inputSkillColor">Color</label>
+            <input type="text" class="form-control bg-light" formControlName="skillColor" id="inputSkillColor"
+                aria-describedby="skillColorHelp" placeholder="Enter skill color">
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="d-flex align-items-end justify-content-end mt-1 pb-1">
+                <a type="submit" [routerLink]="['/admin/dashboard/skills']" role="button"
+                    class="btn btn-primary mr-3">Cancel</a>
+                <button type="submit" role="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        <div class="d-sm-block d-md-none d-lg-none d-xl-none mt-1 pb-1">
+            <div class="d-flex align-items-end justify-content-center">
+                <a type="button" [routerLink]="['/admin/dashboard/skills']" role="button"
+                    class="btn btn-primary mr-3">Cancel</a>
+                <button type="submit" role="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

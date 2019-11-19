@@ -1,0 +1,22 @@
+<section class="featured-posts container">
+    <div class="section-title">
+        <h2><span>My Tutorials</span></h2>
+    </div>
+</section>
+<div class="row card-group" id="tutorialListSection">    
+    <div class="col-sm-12 col-md-6 col-lg-3 mb-3" *ngFor="let skill of skills | async">
+        <div class="card">
+            <div class="card-img-top text-wrap d-flex justify-content-center align-items-center text-capitalize"
+                [ngStyle]="{'background-color': skill.skillColor}">
+                <div class="display-4">{{skill.name}}</div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-capitalize">{{skill.name}} tutorial</h5>
+            </div>
+            <div class="card-footer">
+
+                <a [routerLink]="['/admin/dashboard/tutorials/', skill.name, 'topics']"
+                    class="card-link">TOPICS</a>
+            </div>
+        </div>
+    </div>

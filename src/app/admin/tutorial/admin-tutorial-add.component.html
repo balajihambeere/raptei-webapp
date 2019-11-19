@@ -1,0 +1,38 @@
+<section class="featured-posts container">
+    <div class="section-title">
+        <h2><span>Create New Tutorial</span></h2>
+    </div>
+</section>
+<div class="shadow">
+    <div class="container p-3">
+        <ngb-tabset #tabs>
+            <ngb-tab [disabled]="topicsState" id="topicTab">
+                <ng-template ngbTabTitle><span data-feather="credit-card"></span> Topics</ng-template>
+                <ng-template ngbTabContent>
+                    <div class="d-flex bd-highlight">
+                        <div class="p-2 flex-grow-1 bd-highlight">
+                            <p>3 topics</p>
+                        </div>
+                        <div class="d-flex pr-3 align-items-center">
+                            <a class="btn btn-primary"
+                                [routerLink]="['/admin/dashboard/tutorials/',skill, 'topics', totalCount, 'new']"
+                                role="button"><span data-feather="plus"></span> Add
+                                Topic</a> </div>
+                    </div>
+                    <div class="card mb-2" *ngFor="let topic of topics | async">
+                        <div class="d-flex bd-highlight">
+                            <div class="p-2 flex-grow-1 bd-highlight">
+                                <h5>{{topic.title}}</h5>
+                                <small class="text-muted">{{topic.updated}}</small>
+                            </div>
+                            <div class="d-flex pr-3 align-items-center">
+                                <a [routerLink]="['/admin/dashboard/tutorials/', skill, 'topics', topic.id, 'edit']"><span
+                                        data-feather="edit"></span> EDIT</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>

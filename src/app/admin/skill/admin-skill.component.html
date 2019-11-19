@@ -1,0 +1,31 @@
+<section class="featured-posts container">
+    <div class="section-title">
+        <h2><span>My Categories</span></h2>
+    </div>
+</section>
+
+
+<div class="row" id="skillListSection">
+    <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+        <div class="card d-flex align-items-center justify-content-center bg-light">
+            <a [routerLink]="['/admin/dashboard/skills/new']">
+                <span class="feather-size" data-feather="plus">+</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 mb-3" *ngFor="let skill of skills | async">
+        <div class="card">
+            <div class="card-img-top text-wrap d-flex justify-content-center align-items-center text-capitalize"
+                [ngStyle]="{'background-color': skill.skillColor}">
+                <div class="display-4">{{skill.name}}</div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{skill.name}}</h5>
+                <small class="text-muted">Created By, {{skill.createdBy}}</small>
+            </div>
+            <div class="card-footer">
+                <a [routerLink]="['/admin/dashboard/skills/edit/', skill.id]" class="card-link">EDIT SKILL</a>
+            </div>
+        </div>
+    </div>
+</div>
