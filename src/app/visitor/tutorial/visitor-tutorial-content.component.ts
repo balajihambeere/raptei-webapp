@@ -47,7 +47,6 @@ export class VisitorTutorialContentComponent implements OnInit {
             if (params[keySlug]) {
                 this.topicService.getTopicBySlug(params[keySlug], this.skill).subscribe(item => {
                     if (item instanceof Array) {
-                        console.log(item, 'item');
                         this.topic = item[0];
                         this.markedContent = marked(this.topic.content);
                         const keywords: MetaDefinition = {
@@ -62,18 +61,20 @@ export class VisitorTutorialContentComponent implements OnInit {
                             name: 'author',
                             content: 'www.raptei.com'
                         };
-                        this.meta.addTags([description, keywords, author]);
+                        this.meta.updateTag(description);
+                        this.meta.updateTag(keywords);
+                        this.meta.updateTag(author);
                         this.titleService.setTitle(`${this.topic.skill} ${this.topic.title}`);
                     }
                 });
 
                 if (this.topicService.topics instanceof Array) {
-                    const currentIndex = _.findIndex(this.topicService.topics, { slug: params[keySlug] });
+                    const currentIndex = _.findIndex(this.topicService.topics, { slug: params[keySlug], skill: this.skill });
                     this.previousTopic = this.topicService.topics[currentIndex - 1];
                     this.nextTopic = this.topicService.topics[currentIndex + 1];
                 } else {
                     this.topicService.topicsShared$.subscribe(collection => {
-                        const currentIndex = _.findIndex(collection, { slug: params[keySlug] });
+                        const currentIndex = _.findIndex(collection, { slug: params[keySlug], skill: this.skill });
                         this.previousTopic = collection[currentIndex - 1];
                         this.nextTopic = collection[currentIndex + 1];
                     });

@@ -40,10 +40,10 @@ export class VisitorTutorialViewComponent implements OnInit {
                 });
             }
         });
-        if (urlArray instanceof Array) {
-            if (urlArray[3] === 'introduction') {
-                this.router.navigate(['/tutorials', this.skill, 'introduction']);
-            }
-        }
+        // if (urlArray instanceof Array) {
+        //     if (urlArray[3] === 'introduction') {
+        //         this.router.navigate(['/tutorials', this.skill, 'introduction']);
+        //     }
+        // }
     }
 }

@@ -5,26 +5,33 @@
         </div>
         <div>
             <h2 class="text-center d-none d-sm-none d-md-block d-lg-block text-capitalize">
-                <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
-                    {{topic.title}}
+                <span *ngIf="topic?.title.indexOf('intro') !== -1; else templateName">
+                    {{topic?.title}}
                 </span>
                 <ng-template #templateName>
-                    {{skill}} {{topic.title}}
+                    {{skill}} {{topic?.title}}
                 </ng-template>
             </h2>
 
             <h4 class="text-center d-sm-block d-md-none d-lg-none text-capitalize">
-                <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
-                    {{topic.title}}
+                <span *ngIf="topic?.title.indexOf('intro') !== -1; else templateName">
+                    {{topic?.title}}
                 </span>
                 <ng-template #templateName>
-                    {{skill}} {{topic.title}}
+                    {{skill}} {{topic?.title}}
                 </ng-template>
             </h4>
             <div class="d-none d-md-block">
                 <div class="d-flex">
                     <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
-                        [routerLink]="['/tutorials/', skill, previousTopic?.slug]">{{previousTopic?.title}}</a>
+                        [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
+                        <span *ngIf="previousTopic.title.indexOf('intro') !== -1; else templateName">
+                            Introduction
+                        </span>
+                        <ng-template #templateName>
+                            {{previousTopic?.title}}
+                        </ng-template>
+                    </a>
 
                     <a role="button" class="btn btn-outline-primary mt-2 ml-auto" *ngIf="nextTopic"
                         [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
@@ -33,7 +40,14 @@
             <div>
                 <div class="d-flex d-md-none">
                     <a role="button" class="btn btn-outline-primary mt-2 btn-sm" *ngIf="previousTopic"
-                        [routerLink]="['/tutorials/', skill, previousTopic?.slug]">{{previousTopic?.title}}</a>
+                        [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
+                        <span *ngIf="previousTopic.title.indexOf('intro') !== -1; else templateName">
+                            Introduction
+                        </span>
+                        <ng-template #templateName>
+                            {{previousTopic?.title}}
+                        </ng-template>
+                    </a>
 
                     <a role="button" class="btn btn-outline-primary mt-2 ml-auto btn-sm" *ngIf="nextTopic"
                         [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>

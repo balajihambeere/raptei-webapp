@@ -34,9 +34,8 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a class="text-capitalize"
-                                        [routerLink]="['/tutorials/', skill.name, 'introduction']">{{skill.name}}
-                                        tutorial</a>
+                                    <a class="text-capitalize" (click)="redirect(skill.name)"
+                                        [routerLink]="">{{skill.name}} tutorial</a>
                                 </h5>
                                 <!-- <p class="card-text"><small class="text-muted">updated {{tutorial.updatedOn}}</small> 
                                 </p>-->
