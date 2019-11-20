@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { TutorialService, TopicService, CommonService } from '../../services';
+import { TopicService } from '../../services';
 import { Topic } from '../../models';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -16,7 +16,6 @@ export class VisitorTutorialViewComponent implements OnInit {
     topics: Observable<Topic[]>;
     skill: string;
     constructor(
-        private tutorialService: TutorialService,
         private topicService: TopicService,
         private route: ActivatedRoute,
         private router: Router) {
@@ -40,10 +39,11 @@ export class VisitorTutorialViewComponent implements OnInit {
                 });
             }
         });
-        // if (urlArray instanceof Array) {
-        //     if (urlArray[3] === 'introduction') {
-        //         this.router.navigate(['/tutorials', this.skill, 'introduction']);
-        //     }
-        // }
+        if (urlArray instanceof Array) {
+            if (urlArray[3].includes('intro')) {
+                const slug = `${this.skill}-introduction`;
+                this.router.navigate(['/tutorials', this.skill, slug]);
+            }
+        }
     }
 }

@@ -21,6 +21,7 @@ export class VisitorTutorialComponent implements OnInit {
   ngOnInit() {
     this.skills = this.skillService.getSkills();
   }
+
   redirect(skillName: string) {
     const slug = `${skillName}-introduction`;
     this.router.navigate(['/tutorials', skillName, slug.toLowerCase()]);

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TopicService } from '../../services';
 import { Topic } from '../../models';
 import marked from 'marked';
@@ -6,20 +6,21 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 
 import { Meta, Title, MetaDefinition } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-visitor-content-tutorial',
     templateUrl: './visitor-tutorial-content.component.html',
     styleUrls: ['./visitor-tutorial.scss']
 })
-export class VisitorTutorialContentComponent implements OnInit {
+export class VisitorTutorialContentComponent implements OnInit, OnDestroy {
     topic: Topic;
     markedContent: string;
     topicsCollection: Array<Topic>;
     previousTopic: Topic;
     nextTopic: Topic;
     skill: string;
-
+    subscription: Subscription;
     constructor(
         private topicService: TopicService,
         private route: ActivatedRoute,
@@ -73,7 +74,7 @@ export class VisitorTutorialContentComponent implements OnInit {
                     this.previousTopic = this.topicService.topics[currentIndex - 1];
                     this.nextTopic = this.topicService.topics[currentIndex + 1];
                 } else {
-                    this.topicService.topicsShared$.subscribe(collection => {
+                    this.subscription = this.topicService.topicsShared$.subscribe(collection => {
                         const currentIndex = _.findIndex(collection, { slug: params[keySlug], skill: this.skill });
                         this.previousTopic = collection[currentIndex - 1];
                         this.nextTopic = collection[currentIndex + 1];
@@ -82,5 +83,14 @@ export class VisitorTutorialContentComponent implements OnInit {
             }
         });
 
+    }
+
+    ngOnDestroy() {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+        if (this.topicService.topics) {
+            this.topicService.topics = [];
+        }
     }
 }

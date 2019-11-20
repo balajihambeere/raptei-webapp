@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-visitor-navbar',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class VisitorNavbarComponent {
 
+    constructor(private router: Router) { }
+
+    redirect() {
+        this.router.navigate(['']);
+    }
 }
