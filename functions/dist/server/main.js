@@ -1868,7 +1868,7 @@ exports.styles = styles;
 Object.defineProperty(exports, "__esModule", { value: true });
 class AppComponent {
     constructor() {
-        this.title = 'raptei-webapp';
+        this.title = 'Raptei - Learn Technology Rapidly';
     }
 }
 exports.AppComponent = AppComponent;
@@ -2477,15 +2477,21 @@ const i3 = __webpack_require__(/*! ./visitor-navbar.component */ "./src/app/visi
 var styles_VisitorNavbarComponent = [];
 var RenderType_VisitorNavbarComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_VisitorNavbarComponent, data: {} });
 exports.RenderType_VisitorNavbarComponent = RenderType_VisitorNavbarComponent;
-function View_VisitorNavbarComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 11, "nav", [["class", "navbar navbar-expand-lg navbar-light bg-light fixed-top"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 10, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 2, "a", [["class", "navbar-brand"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+function View_VisitorNavbarComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 11, "nav", [["class", "navbar navbar-expand-lg navbar-light bg-light fixed-top"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 10, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 2, "a", [["class", "navbar-brand"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (i0.ɵnov(_v, 3).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i0.ɵdid(3, 671744, null, 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, "routerLink"] }, null), (_l()(), i0.ɵeld(4, 0, null, null, 0, "img", [["alt", "raptei"], ["class", "d-inline-block align-top"], ["height", "40"], ["src", "../../../assets/images/logo.png"]], null, null, null, null, null)), (_l()(), i0.ɵeld(5, 0, null, null, 6, "ul", [["class", "navbar-nav mr-auto"]], null, null, null, null, null)), (_l()(), i0.ɵeld(6, 0, null, null, 5, "li", [["class", "nav-item active"]], null, null, null, null, null)), (_l()(), i0.ɵeld(7, 0, null, null, 4, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+    } if (("click" === en)) {
+        var pd_1 = (_co.redirect() !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), i0.ɵdid(3, 671744, null, 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], null, null), (_l()(), i0.ɵeld(4, 0, null, null, 0, "img", [["alt", "raptei"], ["class", "d-inline-block align-top"], ["height", "40"], ["src", "../../../assets/images/logo.png"]], null, null, null, null, null)), (_l()(), i0.ɵeld(5, 0, null, null, 6, "ul", [["class", "navbar-nav mr-auto"]], null, null, null, null, null)), (_l()(), i0.ɵeld(6, 0, null, null, 5, "li", [["class", "nav-item active"]], null, null, null, null, null)), (_l()(), i0.ɵeld(7, 0, null, null, 4, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (i0.ɵnov(_v, 8).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i0.ɵdid(8, 671744, null, 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, "routerLink"] }, null), (_l()(), i0.ɵted(-1, null, ["Tutorials"])), (_l()(), i0.ɵeld(10, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ["(current)"]))], function (_ck, _v) { var currVal_2 = "/"; _ck(_v, 3, 0, currVal_2); var currVal_5 = "/"; _ck(_v, 8, 0, currVal_5); }, function (_ck, _v) { var currVal_0 = i0.ɵnov(_v, 3).target; var currVal_1 = i0.ɵnov(_v, 3).href; _ck(_v, 2, 0, currVal_0, currVal_1); var currVal_3 = i0.ɵnov(_v, 8).target; var currVal_4 = i0.ɵnov(_v, 8).href; _ck(_v, 7, 0, currVal_3, currVal_4); }); }
+    } if (("click" === en)) {
+        var pd_1 = (_co.redirect() !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), i0.ɵdid(8, 671744, null, 0, i1.RouterLinkWithHref, [i1.Router, i1.ActivatedRoute, i2.LocationStrategy], null, null), (_l()(), i0.ɵted(-1, null, ["Tutorials"])), (_l()(), i0.ɵeld(10, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ["(current)"]))], null, function (_ck, _v) { var currVal_0 = i0.ɵnov(_v, 3).target; var currVal_1 = i0.ɵnov(_v, 3).href; _ck(_v, 2, 0, currVal_0, currVal_1); var currVal_2 = i0.ɵnov(_v, 8).target; var currVal_3 = i0.ɵnov(_v, 8).href; _ck(_v, 7, 0, currVal_2, currVal_3); }); }
 exports.View_VisitorNavbarComponent_0 = View_VisitorNavbarComponent_0;
-function View_VisitorNavbarComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-visitor-navbar", [], null, null, null, View_VisitorNavbarComponent_0, RenderType_VisitorNavbarComponent)), i0.ɵdid(1, 49152, null, 0, i3.VisitorNavbarComponent, [], null, null)], null, null); }
+function View_VisitorNavbarComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-visitor-navbar", [], null, null, null, View_VisitorNavbarComponent_0, RenderType_VisitorNavbarComponent)), i0.ɵdid(1, 49152, null, 0, i3.VisitorNavbarComponent, [i1.Router], null, null)], null, null); }
 exports.View_VisitorNavbarComponent_Host_0 = View_VisitorNavbarComponent_Host_0;
 var VisitorNavbarComponentNgFactory = i0.ɵccf("app-visitor-navbar", i3.VisitorNavbarComponent, View_VisitorNavbarComponent_Host_0, {}, {}, []);
 exports.VisitorNavbarComponentNgFactory = VisitorNavbarComponentNgFactory;
@@ -2504,6 +2510,12 @@ exports.VisitorNavbarComponentNgFactory = VisitorNavbarComponentNgFactory;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 class VisitorNavbarComponent {
+    constructor(router) {
+        this.router = router;
+    }
+    redirect() {
+        this.router.navigate(['']);
+    }
 }
 exports.VisitorNavbarComponent = VisitorNavbarComponent;
 
@@ -2578,7 +2590,7 @@ const i6 = __webpack_require__(/*! ./home.component */ "./src/app/visitor/home/h
 var styles_HomeComponent = [];
 var RenderType_HomeComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_HomeComponent, data: {} });
 exports.RenderType_HomeComponent = RenderType_HomeComponent;
-function View_HomeComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-visitor-navbar", [], null, null, null, i1.View_VisitorNavbarComponent_0, i1.RenderType_VisitorNavbarComponent)), i0.ɵdid(1, 49152, null, 0, i2.VisitorNavbarComponent, [], null, null), (_l()(), i0.ɵeld(2, 0, null, null, 2, "div", [["style", "padding-top: 60px;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(3, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i0.ɵdid(4, 212992, null, 0, i3.RouterOutlet, [i3.ChildrenOutletContexts, i0.ViewContainerRef, i0.ComponentFactoryResolver, [8, null], i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵeld(5, 0, null, null, 1, "app-visitor-footer", [], null, null, null, i4.View_VisitorFooterComponent_0, i4.RenderType_VisitorFooterComponent)), i0.ɵdid(6, 49152, null, 0, i5.VisitorFooterComponent, [], null, null)], function (_ck, _v) { _ck(_v, 4, 0); }, null); }
+function View_HomeComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-visitor-navbar", [], null, null, null, i1.View_VisitorNavbarComponent_0, i1.RenderType_VisitorNavbarComponent)), i0.ɵdid(1, 49152, null, 0, i2.VisitorNavbarComponent, [i3.Router], null, null), (_l()(), i0.ɵeld(2, 0, null, null, 2, "div", [["style", "padding-top: 60px;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(3, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i0.ɵdid(4, 212992, null, 0, i3.RouterOutlet, [i3.ChildrenOutletContexts, i0.ViewContainerRef, i0.ComponentFactoryResolver, [8, null], i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵeld(5, 0, null, null, 1, "app-visitor-footer", [], null, null, null, i4.View_VisitorFooterComponent_0, i4.RenderType_VisitorFooterComponent)), i0.ɵdid(6, 49152, null, 0, i5.VisitorFooterComponent, [], null, null)], function (_ck, _v) { _ck(_v, 4, 0); }, null); }
 exports.View_HomeComponent_0 = View_HomeComponent_0;
 function View_HomeComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i0.ɵdid(1, 49152, null, 0, i6.HomeComponent, [], null, null)], null, null); }
 exports.View_HomeComponent_Host_0 = View_HomeComponent_Host_0;
@@ -2599,9 +2611,6 @@ exports.HomeComponentNgFactory = HomeComponentNgFactory;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 class HomeComponent {
-    constructor() {
-        this.title = 'app';
-    }
 }
 exports.HomeComponent = HomeComponent;
 
@@ -2781,7 +2790,7 @@ function View_VisitorTutorialContentComponent_16(_l) { return i1.ɵvid(0, [(_l()
     } return ad; }, null, null)), i1.ɵdid(1, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(2, 3), (_l()(), i1.ɵted(3, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _ck(_v, 2, 0, "/tutorials/", _co.skill, ((_co.nextTopic == null) ? null : _co.nextTopic.slug)); _ck(_v, 1, 0, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 1).target; var currVal_1 = i1.ɵnov(_v, 1).href; _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_3 = ((_co.nextTopic == null) ? null : _co.nextTopic.title); _ck(_v, 3, 0, currVal_3); }); }
 function View_VisitorTutorialContentComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 50, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 47, "div", [["class", "col-md-10"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 1, "div", [["class", "bg-light p-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Advertisement "])), (_l()(), i1.ɵeld(4, 0, null, null, 24, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 3, "h2", [["class", "text-center d-none d-sm-none d-md-block d-lg-block text-capitalize"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_1)), i1.ɵdid(7, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), i1.ɵand(0, [["templateName", 2]], null, 0, null, View_VisitorTutorialContentComponent_2)), (_l()(), i1.ɵeld(9, 0, null, null, 3, "h4", [["class", "text-center d-sm-block d-md-none d-lg-none text-capitalize"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_3)), i1.ɵdid(11, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"], ngIfElse: [1, "ngIfElse"] }, null), (_l()(), i1.ɵand(0, [["templateName", 2]], null, 0, null, View_VisitorTutorialContentComponent_4)), (_l()(), i1.ɵeld(13, 0, null, null, 5, "div", [["class", "d-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 4, "div", [["class", "d-flex"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_5)), i1.ɵdid(16, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_8)), i1.ɵdid(18, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(19, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 4, "div", [["class", "d-flex d-md-none"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_9)), i1.ɵdid(22, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_12)), i1.ɵdid(24, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(25, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "article", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 0, "p", [], [[8, "innerHTML", 1]], null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 1, "div", [["class", "bg-light p-4"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Advertisement "])), (_l()(), i1.ɵeld(31, 0, null, null, 5, "div", [["class", "d-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(32, 0, null, null, 4, "div", [["class", "d-flex"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_13)), i1.ɵdid(34, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_14)), i1.ɵdid(36, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(37, 0, null, null, 5, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 4, "div", [["class", "d-flex d-md-none"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_15)), i1.ɵdid(40, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_VisitorTutorialContentComponent_16)), i1.ɵdid(42, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(43, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 1, "h3", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Recommendations"])), (_l()(), i1.ɵeld(46, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(47, 0, null, null, 1, "div", [["class", "bg-light p-4 mb-1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Advertisement "])), (_l()(), i1.ɵeld(49, 0, null, null, 1, "div", [["class", "col-md-2 d-none d-sm-none d-md-block d-lg-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Advertisement "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (((_co.topic == null) ? null : _co.topic.title.indexOf("intro")) !== (0 - 1)); var currVal_1 = i1.ɵnov(_v, 12); _ck(_v, 7, 0, currVal_0, currVal_1); var currVal_2 = (((_co.topic == null) ? null : _co.topic.title.indexOf("intro")) !== (0 - 1)); var currVal_3 = i1.ɵnov(_v, 12); _ck(_v, 11, 0, currVal_2, currVal_3); var currVal_4 = _co.previousTopic; _ck(_v, 16, 0, currVal_4); var currVal_5 = _co.nextTopic; _ck(_v, 18, 0, currVal_5); var currVal_6 = _co.previousTopic; _ck(_v, 22, 0, currVal_6); var currVal_7 = _co.nextTopic; _ck(_v, 24, 0, currVal_7); var currVal_9 = _co.previousTopic; _ck(_v, 34, 0, currVal_9); var currVal_10 = _co.nextTopic; _ck(_v, 36, 0, currVal_10); var currVal_11 = _co.previousTopic; _ck(_v, 40, 0, currVal_11); var currVal_12 = _co.nextTopic; _ck(_v, 42, 0, currVal_12); }, function (_ck, _v) { var _co = _v.component; var currVal_8 = _co.markedContent; _ck(_v, 27, 0, currVal_8); }); }
 exports.View_VisitorTutorialContentComponent_0 = View_VisitorTutorialContentComponent_0;
-function View_VisitorTutorialContentComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-visitor-content-tutorial", [], null, null, null, View_VisitorTutorialContentComponent_0, RenderType_VisitorTutorialContentComponent)), i1.ɵdid(1, 114688, null, 0, i4.VisitorTutorialContentComponent, [i5.TopicService, i2.ActivatedRoute, i2.Router, i6.Meta, i6.Title], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_VisitorTutorialContentComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-visitor-content-tutorial", [], null, null, null, View_VisitorTutorialContentComponent_0, RenderType_VisitorTutorialContentComponent)), i1.ɵdid(1, 245760, null, 0, i4.VisitorTutorialContentComponent, [i5.TopicService, i2.ActivatedRoute, i2.Router, i6.Meta, i6.Title], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_VisitorTutorialContentComponent_Host_0 = View_VisitorTutorialContentComponent_Host_0;
 var VisitorTutorialContentComponentNgFactory = i1.ɵccf("app-visitor-content-tutorial", i4.VisitorTutorialContentComponent, View_VisitorTutorialContentComponent_Host_0, {}, {}, []);
 exports.VisitorTutorialContentComponentNgFactory = VisitorTutorialContentComponentNgFactory;
@@ -2853,7 +2862,7 @@ class VisitorTutorialContentComponent {
                     this.nextTopic = this.topicService.topics[currentIndex + 1];
                 }
                 else {
-                    this.topicService.topicsShared$.subscribe(collection => {
+                    this.subscription = this.topicService.topicsShared$.subscribe(collection => {
                         const currentIndex = _.findIndex(collection, { slug: params[keySlug], skill: this.skill });
                         this.previousTopic = collection[currentIndex - 1];
                         this.nextTopic = collection[currentIndex + 1];
@@ -2861,6 +2870,14 @@ class VisitorTutorialContentComponent {
                 }
             }
         });
+    }
+    ngOnDestroy() {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+        if (this.topicService.topics) {
+            this.topicService.topics = [];
+        }
     }
 }
 exports.VisitorTutorialContentComponent = VisitorTutorialContentComponent;
@@ -2890,8 +2907,7 @@ const i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
 const i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
 const i4 = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "@ng-bootstrap/ng-bootstrap");
 const i5 = __webpack_require__(/*! ./visitor-tutorial-view.component */ "./src/app/visitor/tutorial/visitor-tutorial-view.component.ts");
-const i6 = __webpack_require__(/*! ../../services/tutorial.service */ "./src/app/services/tutorial.service.ts");
-const i7 = __webpack_require__(/*! ../../services/topic.service */ "./src/app/services/topic.service.ts");
+const i6 = __webpack_require__(/*! ../../services/topic.service */ "./src/app/services/topic.service.ts");
 var styles_VisitorTutorialViewComponent = [i0.styles];
 var RenderType_VisitorTutorialViewComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_VisitorTutorialViewComponent, data: {} });
 exports.RenderType_VisitorTutorialViewComponent = RenderType_VisitorTutorialViewComponent;
@@ -2942,7 +2958,7 @@ function View_VisitorTutorialViewComponent_0(_l) { return i1.ɵvid(0, [(_l()(), 
         ad = (pd_5 && ad);
     } return ad; }, null, null)), i1.ɵdid(23, 16384, [[1, 4]], 1, i4.NgbDropdownMenu, [i4.NgbDropdown], null, null), i1.ɵqud(603979776, 4, { menuItems: 1 }), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_VisitorTutorialViewComponent_4)), i1.ɵdid(26, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(131072, i3.AsyncPipe, [i1.ChangeDetectorRef]), (_l()(), i1.ɵeld(28, 0, null, null, 2, "div", [["class", "col-md-10 col-sm-12 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(30, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = i1.ɵunv(_v, 10, 0, i1.ɵnov(_v, 11).transform(_co.topics)); _ck(_v, 10, 0, currVal_1); var currVal_8 = i1.ɵunv(_v, 26, 0, i1.ɵnov(_v, 27).transform(_co.topics)); _ck(_v, 26, 0, currVal_8); _ck(_v, 30, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 6, 0, currVal_0); var currVal_2 = i1.ɵnov(_v, 14).isOpen(); _ck(_v, 13, 0, currVal_2); var currVal_3 = i1.ɵnov(_v, 19).dropdown.isOpen(); _ck(_v, 18, 0, currVal_3); var currVal_4 = _co.title; _ck(_v, 21, 0, currVal_4); var currVal_5 = true; var currVal_6 = i1.ɵnov(_v, 23).dropdown.isOpen(); var currVal_7 = i1.ɵnov(_v, 23).placement; _ck(_v, 22, 0, currVal_5, currVal_6, currVal_7); }); }
 exports.View_VisitorTutorialViewComponent_0 = View_VisitorTutorialViewComponent_0;
-function View_VisitorTutorialViewComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-visitor-view-tutorial", [], null, null, null, View_VisitorTutorialViewComponent_0, RenderType_VisitorTutorialViewComponent)), i1.ɵdid(1, 114688, null, 0, i5.VisitorTutorialViewComponent, [i6.TutorialService, i7.TopicService, i2.ActivatedRoute, i2.Router], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_VisitorTutorialViewComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-visitor-view-tutorial", [], null, null, null, View_VisitorTutorialViewComponent_0, RenderType_VisitorTutorialViewComponent)), i1.ɵdid(1, 114688, null, 0, i5.VisitorTutorialViewComponent, [i6.TopicService, i2.ActivatedRoute, i2.Router], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_VisitorTutorialViewComponent_Host_0 = View_VisitorTutorialViewComponent_Host_0;
 var VisitorTutorialViewComponentNgFactory = i1.ɵccf("app-visitor-view-tutorial", i5.VisitorTutorialViewComponent, View_VisitorTutorialViewComponent_Host_0, {}, {}, []);
 exports.VisitorTutorialViewComponentNgFactory = VisitorTutorialViewComponentNgFactory;
@@ -2961,10 +2977,8 @@ exports.VisitorTutorialViewComponentNgFactory = VisitorTutorialViewComponentNgFa
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-const services_1 = __webpack_require__(/*! ../../services */ "./src/app/services/index.ts");
 class VisitorTutorialViewComponent {
-    constructor(tutorialService, topicService, route, router) {
-        this.tutorialService = tutorialService;
+    constructor(topicService, route, router) {
         this.topicService = topicService;
         this.route = route;
         this.router = router;
@@ -2986,11 +3000,12 @@ class VisitorTutorialViewComponent {
                 });
             }
         });
-        // if (urlArray instanceof Array) {
-        //     if (urlArray[3] === 'introduction') {
-        //         this.router.navigate(['/tutorials', this.skill, 'introduction']);
-        //     }
-        // }
+        if (urlArray instanceof Array) {
+            if (urlArray[3].includes('intro')) {
+                const slug = `${this.skill}-introduction`;
+                this.router.navigate(['/tutorials', this.skill, slug]);
+            }
+        }
     }
 }
 exports.VisitorTutorialViewComponent = VisitorTutorialViewComponent;
