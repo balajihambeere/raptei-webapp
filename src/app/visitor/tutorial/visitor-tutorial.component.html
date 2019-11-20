@@ -1,4 +1,31 @@
-<div class="container-fluid">
+<div class="d-md-none fixed-top bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" [routerLink]="'/'">
+                <img src="../../../assets/images/logo.png" height="40" class="d-inline-block align-top" alt="raptei">
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="'/'">Tutorials<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="mt-2 container-fluid">
+        <div ngbDropdown>
+            <button class="btn btn-secondary text-capitalize w-100 btn-sm" id="topicNavItem" type="button"
+                ngbDropdownToggle>Tutorials</button>
+            <div ngbDropdownMenu aria-labelledby="topicNavItem">
+                <a class="dropdown-item text-capitalize" *ngFor="let skill of skills | async" [routerLink]=""
+                    (click)="redirect(skill.name)">Learn {{skill.name}}</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container-fluid contentPadding">
     <div class="row">
         <div class="col-md-2 d-none d-md-block">
             <nav class="sidebar">
@@ -9,44 +36,39 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
-        <nav class="col-sm-12 col-md-2 d-md-none mt-2">
-            <div ngbDropdown>
-                <button class="btn btn-outline-primary text-capitalize w-100 btn-sm" id="topicNavItem" type="button"
-                    ngbDropdownToggle>Tutorials</button>
-                <div ngbDropdownMenu aria-labelledby="topicNavItem">
-                    <a class="dropdown-item text-capitalize" *ngFor="let skill of skills | async" [routerLink]=""
-                        (click)="redirect(skill.name)">Learn {{skill.name}}</a>
-                </div>
+        <div class="col-md-7 mt-3">
+
+            <div class="bg-light p-4 mb-2">
+                Advertisement
             </div>
-        </nav>
-        <div class="col-md-10 mt-3">
-            <div class="col-md-10">
-                <div class="bg-light p-4 mb-2">
-                    Advertisement
-                </div>
-                <div class="row card-group" id="tutorialsSection">
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3" *ngFor="let skill of skills | async">
-                        <div class="card">
-                            <div class="card-img-top text-wrap d-flex justify-content-center align-items-center text-capitalize"
-                                [ngStyle]="{'background-color': skill.skillColor}">
-                                <div class="display-4">{{skill.name}}</div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a class="text-capitalize" (click)="redirect(skill.name)"
-                                        [routerLink]="">{{skill.name}} tutorial</a>
-                                </h5>
-                                <!-- <p class="card-text"><small class="text-muted">updated {{tutorial.updatedOn}}</small> 
+
+            <div class="row card-group" id="tutorialsSection">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3" *ngFor="let skill of skills | async">
+                    <div class="card">
+                        <div class="card-img-top text-wrap d-flex justify-content-center align-items-center text-capitalize"
+                            [ngStyle]="{'background-color': skill.skillColor}">
+                            <div class="display-4">{{skill.name}}</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a class="text-capitalize" (click)="redirect(skill.name)" [routerLink]="">{{skill.name}}
+                                    tutorial</a>
+                            </h5>
+                            <!-- <p class="card-text"><small class="text-muted">updated {{tutorial.updatedOn}}</small> 
                                 </p>-->
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+
+            <div class="bg-light p-4 mb-2">
                 Advertisement
             </div>
+        </div>
+        <div class="col-md-3 d-none d-md-block">
+            Advertisement
         </div>
     </div>
 </div>

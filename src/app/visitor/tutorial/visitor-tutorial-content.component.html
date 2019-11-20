@@ -1,9 +1,11 @@
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-9">
         <div class="bg-light p-4">
             Advertisement
         </div>
+
         <div>
+            <!-- large screen header-->
             <h2 class="text-center d-none d-sm-none d-md-block d-lg-block text-capitalize">
                 <span *ngIf="topic?.title.indexOf('intro') !== -1; else templateName">
                     {{topic?.title}}
@@ -13,6 +15,7 @@
                 </ng-template>
             </h2>
 
+            <!-- small screen header-->
             <h4 class="text-center d-sm-block d-md-none d-lg-none text-capitalize">
                 <span *ngIf="topic?.title.indexOf('intro') !== -1; else templateName">
                     {{topic?.title}}
@@ -21,11 +24,12 @@
                     {{skill}} {{topic?.title}}
                 </ng-template>
             </h4>
+            <!-- large screen prev next buttons-->
             <div class="d-none d-md-block">
                 <div class="d-flex">
                     <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
                         [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
-                        <span *ngIf="previousTopic.title.indexOf('intro') !== -1; else templateName">
+                        <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
                             Introduction
                         </span>
                         <ng-template #templateName>
@@ -37,45 +41,66 @@
                         [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
                 </div>
             </div>
-            <div>
-                <div class="d-flex d-md-none">
-                    <a role="button" class="btn btn-outline-primary mt-2 btn-sm" *ngIf="previousTopic"
-                        [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
-                        <span *ngIf="previousTopic.title.indexOf('intro') !== -1; else templateName">
-                            Introduction
-                        </span>
-                        <ng-template #templateName>
-                            {{previousTopic?.title}}
-                        </ng-template>
-                    </a>
 
-                    <a role="button" class="btn btn-outline-primary mt-2 ml-auto btn-sm" *ngIf="nextTopic"
-                        [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
-                </div>
+            <!-- small screen prev next buttons-->
+            <div class="d-flex d-md-none">
+                <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
+                    [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
+                    <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
+                        Introduction
+                    </span>
+                    <ng-template #templateName>
+                        {{previousTopic?.title}}
+                    </ng-template>
+                </a>
+
+                <a role="button" class="btn btn-outline-primary mt-2 ml-auto btn-sm" *ngIf="nextTopic"
+                    [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
             </div>
 
             <hr />
+
             <article class="clearfix">
                 <p [innerHTML]="markedContent"></p>
             </article>
+
             <hr />
         </div>
+
         <div class="bg-light p-4">
             Advertisement
         </div>
+
+        <!-- large screen prev next buttons -->
         <div class="d-none d-md-block">
             <div class="d-flex">
                 <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
-                    [routerLink]="['/tutorials/', skill, previousTopic?.slug]">{{previousTopic?.title}}</a>
+                    [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
+                    <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
+                        Introduction
+                    </span>
+                    <ng-template #templateName>
+                        {{previousTopic?.title}}
+                    </ng-template>
+                </a>
 
                 <a role="button" class="btn btn-outline-primary mt-2 ml-auto" *ngIf="nextTopic"
                     [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
             </div>
         </div>
+
+        <!-- small screen prev next buttons-->
         <div>
             <div class="d-flex d-md-none">
-                <a role="button" class="btn btn-outline-primary mt-2 btn-sm" *ngIf="previousTopic"
-                    [routerLink]="['/tutorials/', skill, previousTopic?.slug]">{{previousTopic?.title}}</a>
+                <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
+                    [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
+                    <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
+                        Introduction
+                    </span>
+                    <ng-template #templateName>
+                        {{previousTopic?.title}}
+                    </ng-template>
+                </a>
 
                 <a role="button" class="btn btn-outline-primary mt-2 ml-auto btn-sm" *ngIf="nextTopic"
                     [routerLink]="['/tutorials/', skill, nextTopic?.slug]">{{nextTopic?.title}}</a>
@@ -89,8 +114,10 @@
         <div class="bg-light p-4 mb-1">
             Advertisement
         </div>
+
     </div>
-    <div class="col-md-2 d-none d-sm-none d-md-block d-lg-block">
+
+    <div class="col-md-3 d-none d-sm-none d-md-block d-lg-block">
         Advertisement
     </div>
 </div>
