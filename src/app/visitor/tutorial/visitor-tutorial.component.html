@@ -4,7 +4,7 @@
             <nav class="sidebar">
                 <ul class="nav flex-column" id="tutorialsNavSidebar">
                     <li class="nav-item" *ngFor="let skill of skills | async">
-                        <a class="nav-link text-capitalize" [routerLink]="['/tutorials/', skill.name, 'introduction']">
+                        <a class="nav-link text-capitalize" [routerLink]="" (click)="redirect(skill.name)">
                             Learn {{skill.name}} </a>
                     </li>
                 </ul>
@@ -15,8 +15,8 @@
                 <button class="btn btn-outline-primary text-capitalize w-100 btn-sm" id="topicNavItem" type="button"
                     ngbDropdownToggle>Tutorials</button>
                 <div ngbDropdownMenu aria-labelledby="topicNavItem">
-                    <a class="dropdown-item text-capitalize" *ngFor="let skill of skills | async"
-                        [routerLink]="['/tutorials/', skill.name, 'introduction']">Learn {{skill.name}}</a>
+                    <a class="dropdown-item text-capitalize" *ngFor="let skill of skills | async" [routerLink]=""
+                        (click)="redirect(skill.name)">Learn {{skill.name}}</a>
                 </div>
             </div>
         </nav>
@@ -34,7 +34,8 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a class="text-capitalize" [routerLink]="['/tutorials/', skill.name, 'introduction']">{{skill.name}}
+                                    <a class="text-capitalize"
+                                        [routerLink]="['/tutorials/', skill.name, 'introduction']">{{skill.name}}
                                         tutorial</a>
                                 </h5>
                                 <!-- <p class="card-text"><small class="text-muted">updated {{tutorial.updatedOn}}</small> 

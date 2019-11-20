@@ -66,8 +66,8 @@ export class TopicService {
         );
     }
 
-    getTopicBySlug(slug: string) {
-        return this.afs.collection('topics', ref => ref.where('slug', '==', slug)).valueChanges();
+    getTopicBySlug(slug: string, skill: string) {
+        return this.afs.collection('topics', ref => ref.where('slug', '==', slug).orderBy('skill')).valueChanges();
     }
     shareTopics(topics: Array<Topic>) {
         this.topics = topics;

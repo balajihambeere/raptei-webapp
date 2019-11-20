@@ -64,12 +64,13 @@ export class AdminTutorialTopicComponent implements OnInit {
 
 
     submitForm() {
-        const title = 'title';
+        let title = 'title';
         const content = 'content';
         const metaDescription = 'metaDescription';
         const keywords = 'keywords';
+        title = this.topicForm.value[title];
         const data: Topic = {
-            title: this.topicForm.value[title],
+            title: title.toLowerCase(),
             content: this.topicForm.value[content],
             metaDescription: this.topicForm.value[metaDescription],
             keywords: this.topicForm.value[keywords],

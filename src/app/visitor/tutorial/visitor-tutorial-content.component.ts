@@ -5,7 +5,7 @@ import marked from 'marked';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 
-import { Meta, Title } from '@angular/platform-browser';
+import { Meta, Title, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-visitor-content-tutorial',
@@ -45,15 +45,24 @@ export class VisitorTutorialContentComponent implements OnInit {
         this.route.params.subscribe(params => {
 
             if (params[keySlug]) {
-                this.topicService.getTopicBySlug(params[keySlug]).subscribe(item => {
+                this.topicService.getTopicBySlug(params[keySlug], this.skill).subscribe(item => {
                     if (item instanceof Array) {
+                        console.log(item, 'item');
                         this.topic = item[0];
                         this.markedContent = marked(this.topic.content);
-                        this.meta.addTags([
-                            { name: 'description', content: this.topic.metaDescription },
-                            { name: 'author', content: 'www.raptei.com' },
-                            { name: 'keywords', content: this.topic.keywords }
-                        ]);
+                        const keywords: MetaDefinition = {
+                            name: 'keywords',
+                            content: this.topic.keywords
+                        };
+                        const description: MetaDefinition = {
+                            name: 'description',
+                            content: this.topic.metaDescription
+                        };
+                        const author: MetaDefinition = {
+                            name: 'author',
+                            content: 'www.raptei.com'
+                        };
+                        this.meta.addTags([description, keywords, author]);
                         this.titleService.setTitle(`${this.topic.skill} ${this.topic.title}`);
                     }
                 });

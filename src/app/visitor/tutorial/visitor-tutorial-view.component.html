@@ -8,16 +8,31 @@
                     </a>
                 </li>
                 <li class="nav-item" *ngFor="let topic of topics | async">
-                    <a class="nav-link text-capitalize" [routerLink]="['/tutorials/', skill, topic.slug]">{{skill}} {{topic.title}}</a>
+                    <a class="nav-link text-capitalize" [routerLink]="['/tutorials/', skill, topic.slug]">
+                        <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
+                            {{topic.title}}
+                        </span>
+                        <ng-template #templateName>
+                            {{skill}} {{topic.title}}
+                        </ng-template>
+                    </a>
                 </li>
             </ul>
         </nav>
         <nav class="col-sm-12 col-md-2 d-md-none mt-2">
-            <div ngbDropdown >
-                <button class="btn btn-outline-primary text-capitalize w-100 btn-sm" id="topicNavItem" ngbDropdownToggle>{{title}}</button>
+            <div ngbDropdown>
+                <button class="btn btn-outline-primary text-capitalize w-100 btn-sm" id="topicNavItem"
+                    ngbDropdownToggle>{{title}}</button>
                 <div ngbDropdownMenu aria-labelledby="topicNavItem">
                     <a class="dropdown-item text-capitalize" *ngFor="let topic of topics | async"
-                        [routerLink]="['/tutorials/', skill, topic.slug]">{{skill}} {{topic.title}}</a>
+                        [routerLink]="['/tutorials/', skill, topic.slug]">
+                        <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
+                            {{topic.title}}
+                        </span>
+                        <ng-template #templateName>
+                            {{skill}} {{topic.title}}
+                        </ng-template>
+                    </a>
                 </div>
             </div>
         </nav>
