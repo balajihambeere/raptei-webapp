@@ -42,9 +42,10 @@ export class VisitorTutorialContentComponent implements OnInit, OnDestroy {
             }
             window.scrollTo(0, 0);
         });
-        const keySlug = 'slug';
-        this.route.params.subscribe(params => {
 
+        const keySlug = 'slug';
+
+        this.route.params.subscribe(params => {
             if (params[keySlug]) {
                 this.topicService.getTopicBySlug(params[keySlug], this.skill).subscribe(item => {
                     if (item instanceof Array) {
