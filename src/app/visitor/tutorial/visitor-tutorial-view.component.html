@@ -18,14 +18,7 @@
                 ngbDropdownToggle>{{title}}</button>
             <div ngbDropdownMenu aria-labelledby="topicNavItem">
                 <a class="dropdown-item text-capitalize" *ngFor="let topic of topics | async"
-                    [routerLink]="['/tutorials/', skill, topic.slug]">
-                    <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
-                        {{topic.title}}
-                    </span>
-                    <ng-template #templateName>
-                        {{skill}} {{topic.title}}
-                    </ng-template>
-                </a>
+                    [routerLink]="['/tutorials/', skill, topic.slug]"> {{skill}} {{topic.title}}</a>
             </div>
         </div>
     </nav>
@@ -41,12 +34,7 @@
                 </li>
                 <li class="nav-item" *ngFor="let topic of topics | async">
                     <a class="nav-link text-capitalize" [routerLink]="['/tutorials/', skill, topic.slug]">
-                        <span *ngIf="topic.title.indexOf('intro') !== -1; else templateName">
-                            {{topic.title}}
-                        </span>
-                        <ng-template #templateName>
-                            {{skill}} {{topic.title}}
-                        </ng-template>
+                        {{topic.title}}
                     </a>
                 </li>
             </ul>

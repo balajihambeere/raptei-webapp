@@ -76,12 +76,7 @@
             <div class="d-flex">
                 <a role="button" class="btn btn-outline-primary mt-2" *ngIf="previousTopic"
                     [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
-                    <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
-                        Introduction
-                    </span>
-                    <ng-template #templateName>
-                        {{previousTopic?.title}}
-                    </ng-template>
+                    {{previousTopic?.title}}
                 </a>
 
                 <a role="button" class="btn btn-outline-primary mt-2 ml-auto" *ngIf="nextTopic"
@@ -94,12 +89,7 @@
             <div class="d-flex d-md-none">
                 <a role="button" class="btn btn-outline-primary mt-2 btn-sm" *ngIf="previousTopic"
                     [routerLink]="['/tutorials/', skill, previousTopic?.slug]">
-                    <span *ngIf="previousTopic?.title.indexOf('intro') !== -1; else templateName">
-                        Introduction
-                    </span>
-                    <ng-template #templateName>
-                        {{previousTopic?.title}}
-                    </ng-template>
+                    {{previousTopic?.title}}
                 </a>
 
                 <a role="button" class="btn btn-outline-primary mt-2 ml-auto btn-sm" *ngIf="nextTopic"
