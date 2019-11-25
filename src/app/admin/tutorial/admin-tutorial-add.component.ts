@@ -1,10 +1,8 @@
-import { Component, OnInit, ViewChild, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { TopicService } from '../../services';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Topic } from '../../models';
-import { NgbTabset } from '@ng-bootstrap/ng-bootstrap';
-
 
 @Component({
     selector: 'app-admin-tutorial-add',
@@ -16,12 +14,13 @@ export class AdminTutorialAddComponent implements OnInit {
     topics: Observable<Array<Topic>>;
     tutorialState = true;
     topicsState = true;
-    totalCount: number;
+    totalCount = 0;
 
-    constructor(public topicService: TopicService,
-                private route: ActivatedRoute,
-                private router: Router,
-                private cdRef: ChangeDetectorRef) {
+    constructor(
+        public topicService: TopicService,
+        private route: ActivatedRoute,
+        private router: Router,
+        private cdRef: ChangeDetectorRef) {
     }
     ngOnInit() {
         if (this.router.url.includes('topics')) {

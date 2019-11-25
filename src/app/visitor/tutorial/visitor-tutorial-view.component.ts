@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TopicService } from '../../services';
 import { Topic } from '../../models';
 import { Observable } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 @Component({
     selector: 'app-visitor-view-tutorial',
@@ -22,6 +22,12 @@ export class VisitorTutorialViewComponent implements OnInit {
 
     }
     ngOnInit() {
+        this.router.events.subscribe((evt) => {
+            if (!(evt instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0);
+        });
         const urlArray = this.router.url.split('/');
         const keySkill = 'skill';
         this.route.params.subscribe(params => {

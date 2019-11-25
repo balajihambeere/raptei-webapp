@@ -8,6 +8,6 @@ export interface Tutorial {
     skill?: string;
     bgColor?: string;
     updatedOn?: Date;
-    orderNumber?: string;
+    orderNumber?: number;
     userId?: string;
 }

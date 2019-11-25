@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Skill } from '../../models';
 import { SkillService } from '../../services';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-visitor-tutorial',
@@ -19,6 +19,12 @@ export class VisitorTutorialComponent implements OnInit {
 
   }
   ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
     this.skills = this.skillService.getSkills();
   }
 
